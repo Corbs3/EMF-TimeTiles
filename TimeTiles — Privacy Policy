@@ -1,0 +1,30 @@
+# TimeTiles — Privacy Policy
+
+**Last updated: April 2026**
+
+## Overview
+
+TimeTiles is a Chrome extension that displays the current time across Ellen MacArthur Foundation office locations and provides a time zone converter. This policy explains how the extension handles your data.
+
+## Data collection
+
+TimeTiles does **not** collect, store, transmit or share any personal data with third parties.
+
+## How it works
+
+- All time calculations happen locally in your browser using the JavaScript `Intl` API
+- No external API calls are made — no data leaves your device
+- If you grant location permission, your coordinates are used locally to detect which office you are nearest to. Your location is never stored or transmitted.
+- Your location is only requested at the moment you open the extension and is not retained between sessions
+
+## Permissions
+
+| Permission | Reason |
+|---|---|
+| `storage` | To store user preferences locally |
+| `sidePanel` | To display TimeTiles as a browser side panel |
+| `geolocation` | To detect which EMF office you are nearest to. Optional — the extension works without it. |
+
+## Contact
+
+TimeTiles is an internal tool built by the IT team at the Ellen MacArthur Foundation. For questions contact [it@ellenmacarthurfoundation.org](mailto:it@ellenmacarthurfoundation.org).
