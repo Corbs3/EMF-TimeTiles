@@ -1,30 +1,46 @@
-# TimeTiles — Privacy Policy
+# Privacy Policy — TimeTiles
 
 **Last updated: April 2026**
 
 ## Overview
 
-TimeTiles is a Chrome extension that displays the current time across Ellen MacArthur Foundation office locations and provides a time zone converter. This policy explains how the extension handles your data.
+TimeTiles is a Chrome extension that displays live clocks for configured office locations and provides time zone conversion tools. This policy explains how the extension handles your data.
 
-## Data collection
+## Data Collected
 
-TimeTiles does **not** collect, store, transmit or share any personal data with third parties.
+TimeTiles stores the following data **locally in your browser only**:
 
-## How it works
+- Any custom locations you add to the "My locations" section (city name and timezone)
 
-- All time calculations happen locally in your browser using the JavaScript `Intl` API
-- No external API calls are made — no data leaves your device
-- If you grant location permission, your coordinates are used locally to detect which office you are nearest to. Your location is never stored or transmitted.
-- Your location is only requested at the moment you open the extension and is not retained between sessions
+No other data is stored. Office tile times are calculated on the fly from your system clock and are never saved.
+
+## Location Data
+
+TimeTiles requests access to your browser's geolocation in order to:
+
+- Detect which office you are nearest to
+- Show a "Your location" tile with your local time
+
+Your location coordinates are used only in memory to render the tiles and are never stored or transmitted anywhere. If you decline the location permission, the extension falls back to matching your system timezone instead.
+
+## Data Storage
+
+Custom saved locations are stored using Chrome's `storage.local` API. This data never leaves your browser and is not accessible to any website or third party.
+
+## Data Sharing
+
+No data is collected, transmitted, or shared with any external server, service, or third party.
 
 ## Permissions
 
-| Permission | Reason |
-|---|---|
-| `storage` | To store user preferences locally |
-| `sidePanel` | To display TimeTiles as a browser side panel |
-| `geolocation` | To detect which EMF office you are nearest to. Optional — the extension works without it. |
+- **storage** - used to save your custom locations locally
+- **sidePanel** - used to display the extension in Chrome's side panel
+- **geolocation** - used to detect your location for nearest-office highlighting; coordinates are never stored or transmitted
+
+## Changes to This Policy
+
+This policy may be updated occasionally. The latest version will always be available at this URL.
 
 ## Contact
 
-TimeTiles is an internal tool built by the IT team at the Ellen MacArthur Foundation. For questions contact [it@ellenmacarthurfoundation.org](mailto:it@ellenmacarthurfoundation.org).
+For questions about this extension, open an issue on the GitHub repository.
