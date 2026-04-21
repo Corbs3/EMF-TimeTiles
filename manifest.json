@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "SlotSync",
+  "version": "1.0.3",
+  "description": "Find when colleagues are free and schedule meetings in one click.",
+  "permissions": ["identity", "storage", "sidePanel"],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_icon": {
+      "16":  "icons/icon16.png",
+      "48":  "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "SlotSync"
+  },
+  "icons": {
+    "16":  "icons/icon16.png",
+    "48":  "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
