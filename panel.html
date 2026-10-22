@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TimeTiles</title>
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <header class="top">
+    <h1 class="brand">Time<span class="brand-pill">Tiles</span></h1>
+    <button id="fmt" class="btn btn-small" type="button">24h</button>
+  </header>
+
+  <main>
+    <section aria-label="Times around EMF">
+      <ul id="rows" class="rows"></ul>
+    </section>
+
+    <section class="card" aria-labelledby="conv-title">
+      <h2 id="conv-title">What time is...</h2>
+      <div class="conv-inputs">
+        <label class="field">Time
+          <input type="time" id="conv-time-a">
+        </label>
+        <label class="field field-wide">In
+          <input id="conv-zone" list="city-list" autocomplete="off" placeholder="Any city">
+        </label>
+      </div>
+      <div class="swap-row">
+        <button id="swap" class="btn btn-swap" type="button" aria-label="Swap the two places">⇅</button>
+        <span id="conv-day" class="day-note" aria-live="polite"></span>
+      </div>
+      <div class="conv-inputs">
+        <label class="field">Time
+          <input type="time" id="conv-time-b" disabled>
+        </label>
+        <label class="field field-wide">In
+          <input id="conv-extra" list="city-list" autocomplete="off" placeholder="Any city, e.g. Tokyo">
+        </label>
+      </div>
+      <p id="conv-msg" class="msg" role="status"></p>
+      <h3 class="sub-title">Across EMF</h3>
+      <ul id="conv-out" class="conv-out"></ul>
+      <p class="hint">Dark bubbles are outside working hours (9:00 to 17:30)</p>
+    </section>
+
+    <form id="add-form" class="card add-form" hidden>
+      <label for="add-input" class="add-label">Add a place</label>
+      <div class="add-row">
+        <input id="add-input" list="city-list" placeholder="Type a city, e.g. Lisbon" autocomplete="off">
+        <button type="submit" class="btn btn-pop">Add</button>
+      </div>
+      <p id="add-msg" class="msg" role="status"></p>
+    </form>
+
+    <div class="actions">
+      <button id="add-toggle" class="btn" type="button" aria-expanded="false" aria-controls="add-form">+ Add place</button>
+      <button id="copy" class="btn btn-pop" type="button">Copy for Slack</button>
+    </div>
+  </main>
+
+  <datalist id="city-list"></datalist>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="panel.js"></script>
+</body>
+</html>
